@@ -11,7 +11,7 @@ class adminMyADC
         $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = "";
-        $dbname = '	my_adc_college_management';
+        $dbname = 'my_adc_college_management';
 
         $this->conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
@@ -23,7 +23,7 @@ class adminMyADC
     public function admin_login($data)
     {
         $admin_email = $data['admin_email'];
-        $admin_pass = md5($data['admin_password']);
+        $admin_pass = md5($data['admin_pass']);
 
         $query = "SELECT * FROM admin_info WHERE admin_email='$admin_email' && admin_password='$admin_pass'";
 
@@ -38,5 +38,12 @@ class adminMyADC
                 $_SESSION['admin_name'] = $admin_data['admin_name'];
             }
         }
+    }
+
+    public function adminLogout()
+    {
+        unset($_SESSION['admin_id']);
+        unset($_SESSION['admin_name']);
+        header('location:index.php');
     }
 }
