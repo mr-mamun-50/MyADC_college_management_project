@@ -32,6 +32,10 @@ if (isset($_GET['adminlogout'])) {
                     if (isset($view)) {
                         if ($view == "dashboard") {
                             include("./view/dash_view.php");
+                        } else  if ($view == "add_notice") {
+                            include("./view/add_notice_view.php");
+                        } else  if ($view == "manage_notice") {
+                            include("./view/manage_notice_view.php");
                         }
                     }
 

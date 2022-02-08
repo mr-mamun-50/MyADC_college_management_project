@@ -13,11 +13,11 @@
         </div>
     </div>
     <div class="col-xl-3 col-md-6">
-        <div class="card bg-warning text-dark mb-4">
+        <div class="card bg-info text-white mb-4">
             <div class="card-body">Current Teachers</div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-dark stretched-link" href="#">View Details</a>
-                <div class="small text-dark"><i class="fas fa-angle-right"></i></div>
+                <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-chart-area mr-1"></i>
-                Area Chart Example
+                Students Attendance
             </div>
             <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
         </div>
@@ -54,7 +54,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-chart-bar mr-1"></i>
-                Bar Chart Example
+                HSC Result
             </div>
             <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
         </div>
@@ -63,7 +63,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
-        DataTable Example
+        Grand Students
     </div>
     <div class="card-body">
         <div class="table-responsive">

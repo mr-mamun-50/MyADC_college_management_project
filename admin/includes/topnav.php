@@ -1,6 +1,6 @@
-<nav class="sb-topnav navbar navbar-expand navbar-light bg-light shadow-sm">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <button class="btn btn-link btn-sm order-1 order-lg-0 ml-3" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-    <a class="navbar-brand ml-1" style="width: 120px;" href="dashboard.php"><img style="height: 40px;" src="images/logo.png" alt="MyADC"></a>
+    <a class="navbar-brand ml-1" style="width: 120px;" href="dashboard.php"><img style="height: 40px;" src="images/logo_white.png" alt="MyADC"></a>
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <div class="input-group">

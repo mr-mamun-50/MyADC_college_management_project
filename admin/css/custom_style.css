@@ -21,6 +21,7 @@ html::-webkit-scrollbar-track {
 }
 html::-webkit-scrollbar-thumb {
     background: #a9a9a9;
+    /* background: #e9ecef; */
     border-radius: 10px;
 }
 
@@ -28,7 +29,7 @@ html::-webkit-scrollbar-thumb {
     width: 5px;
 }
 .sb-sidenav-menu::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #343a40;
 }
 .sb-sidenav-menu::-webkit-scrollbar-thumb {
     background: #a9a9a9;
