@@ -8,7 +8,7 @@
                     Dashboard
                 </a>
 
-                <a class="nav-link collapsed mx-1 active" href="#" data-toggle="collapse" data-target="#notices" aria-expanded="false" aria-controls="notices">
+                <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#notices" aria-expanded="false" aria-controls="notices">
                     <div class="sb-nav-link-icon"><i class="fas fa-flag"></i></div>
                     Notices
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
