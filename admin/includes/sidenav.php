@@ -8,31 +8,18 @@
                     Dashboard
                 </a>
 
-                <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#notices" aria-expanded="false" aria-controls="notices">
+                <a class="nav-link mx-1" href="manage_notice.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-flag"></i></div>
                     Notices
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="notices" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link mr-1" href="add_notice.php">Create Notice</a>
-                        <a class="nav-link mr-1" href="manage_notice.php">Manage Notice</a>
-                    </nav>
-                </div>
 
                 <!-- <div class="sb-sidenav-menu-heading">Academic</div> -->
 
-                <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#Classes" aria-expanded="false" aria-controls="Classes">
+                <a class="nav-link mx-1" href="class_routine_xi.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
                     Class Routine
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="Classes" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link mr-1" href="#">XI</a>
-                        <a class="nav-link mr-1" href="#">XII</a>
-                    </nav>
-                </div>
+
 
                 <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#atdTS" aria-expanded="false" aria-controls="atdTS">
                     <div class="sb-nav-link-icon"><i class="fas fa-calendar-check"></i></div>
@@ -126,20 +113,11 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-bus"></i></div>
                     Transport
                 </a>
-                <a class="nav-link mx-1" href="#">
+                <a class="nav-link mx-1 mb-3" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-hotel"></i></div>
                     Hostel
                 </a>
 
-                <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link mr-1" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
-                </a>
-                <a class="nav-link mr-1" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
-                </a>
 
             </div>
         </div>

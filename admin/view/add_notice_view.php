@@ -6,12 +6,21 @@ if (isset($_POST['add_notice'])) {
 
 ?>
 
-<ol class="breadcrumb my-3">
+<ul class="nav nav-tabs mt-3">
+    <li class="nav-item">
+        <a class="nav-link" href="manage_notice.php">Manage Notice</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="add_notice.php">Create Notice</a>
+    </li>
+</ul>
+
+<!-- <ol class="breadcrumb my-3">
     <li class="breadcrumb-item">Notices</li>
     <li class="breadcrumb-item active">Create Notice</li>
-</ol>
+</ol> -->
 
-<div class="shadow px-3 py-4 mb-3 rounded">
+<div class="shadow px-3 py-4 mb-3">
 
     <?php if (isset($return_msg)) { ?>
 
@@ -24,11 +33,6 @@ if (isset($_POST['add_notice'])) {
     <?php } ?>
 
     <form action="" method="POST">
-
-        <div class="form-group">
-            <label class="mb-1" for="notice_title">Title</label>
-            <input name="notice_title" class="form-control py-2" id="notice_title" placeholder="Enter title here" type="text" required />
-        </div>
 
         <div class="form-group">
             <label class="mb-1" for="notice_subject">Subject</label>

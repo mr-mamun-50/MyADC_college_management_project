@@ -1,6 +1,6 @@
 <?php
 
-include("class/function.php");
+include("./class/function.php");
 $obj = new adminMyADC();
 session_start();
 $id = $_SESSION['admin_id'];
@@ -26,16 +26,26 @@ if (isset($_GET['adminlogout'])) {
         <div id="layoutSidenav_content">
             <main>
 
-                <div class="container-fluid">
+                <div class="px-md-4">
                     <?php
 
                     if (isset($view)) {
                         if ($view == "dashboard") {
                             include("./view/dash_view.php");
-                        } else  if ($view == "add_notice") {
-                            include("./view/add_notice_view.php");
                         } else  if ($view == "manage_notice") {
                             include("./view/manage_notice_view.php");
+                        } else  if ($view == "add_notice") {
+                            include("./view/add_notice_view.php");
+                        } else  if ($view == "edit_notice") {
+                            include("./view/edit_notice_view.php");
+                        } else  if ($view == "class_routine_xi") {
+                            include("./view/class_routine_view_xi.php");
+                        } else  if ($view == "class_routine_xii") {
+                            include("./view/class_routine_view_xii.php");
+                        } else  if ($view == "edit_routine_xi") {
+                            include("./view/edit_routine_xi_view.php");
+                        } else  if ($view == "edit_routine_xii") {
+                            include("./view/edit_routine_xii_view.php");
                         }
                     }
 

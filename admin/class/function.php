@@ -49,14 +49,13 @@ class adminMyADC
 
     public function add_notice($data)
     {
-        $notice_title = $data['notice_title'];
         $notice_subject = $data['notice_subject'];
         $notice_by_name = $data['notice_by_name'];
         $notice_by_designation = $data['notice_by_designation'];
         $notice_desc = $data['notice_desc'];
         $notice_status = $data['notice_status'];
 
-        $query = "INSERT INTO notices(notice_title, notice_subject, notice_description, notice_by_name, notice_by_designation, notice_status) VALUE('$notice_title', '$notice_subject', '$notice_desc', '$notice_by_name', '$notice_by_designation', '$notice_status')";
+        $query = "INSERT INTO notices(notice_subject, notice_description, notice_by_name, notice_by_designation, notice_status) VALUE('$notice_subject', '$notice_desc', '$notice_by_name', '$notice_by_designation', '$notice_status')";
 
         if (mysqli_query($this->conn, $query)) {
             return "Notice Added Successfully";
@@ -78,6 +77,161 @@ class adminMyADC
 
         if (mysqli_query($this->conn, $query)) {
             return "Category Deleted Seccessfully";
+        }
+    }
+    public function get_notice_info($id)
+    {
+        $query = "SELECT * FROM notices WHERE notice_id = '$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $notice_info = mysqli_query($this->conn, $query);
+            $notice = mysqli_fetch_assoc($notice_info);
+            return $notice;
+        }
+    }
+    public function update_notice($data)
+    {
+        $notice_id = $data['edit_notice_id'];
+        $change_notice_subject = $data['change_notice_subject'];
+        $change_notice_by_name = $data['change_notice_by_name'];
+        $change_notice_by_designation = $data['change_notice_by_designation'];
+        $change_notice_description = $data['change_notice_description'];
+        $change_notice_status = $data['change_notice_status'];
+
+        $query = "UPDATE notices SET notice_subject='$change_notice_subject', notice_description='$change_notice_description', notice_by_name='$change_notice_by_name', notice_by_designation='$change_notice_by_designation', notice_status='$change_notice_status' WHERE notice_id='$notice_id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Notice Updated Successfully!";
+        }
+    }
+
+    public function display_routine_xi()
+    {
+        $query = "SELECT * FROM class_routine_xi";
+
+        if (mysqli_query($this->conn, $query)) {
+            $routine_xi = mysqli_query($this->conn, $query);
+            return $routine_xi;
+        }
+    }
+    public function display_routine_xii()
+    {
+        $query = "SELECT * FROM class_routine_xii";
+
+        if (mysqli_query($this->conn, $query)) {
+            $routine_xi = mysqli_query($this->conn, $query);
+            return $routine_xi;
+        }
+    }
+    public function get_routine_info_xi($id)
+    {
+        $query = "SELECT * FROM class_routine_xi WHERE ID = '$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $routine_info = mysqli_query($this->conn, $query);
+            $routine_xi = mysqli_fetch_assoc($routine_info);
+            return $routine_xi;
+        }
+    }
+    public function update_routine_xi_sc($data)
+    {
+        $id = $data['id'];
+        $sc10_30 = $data['routine_10_30'];
+        $sc11_15 = $data['routine_11_15'];
+        $sc12_00 = $data['routine_12_00'];
+        $sc12_45 = $data['routine_12_45'];
+        $sc1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xi SET sc10_30='$sc10_30', sc11_15='$sc11_15', sc12_00='$sc12_00', sc12_45='$sc12_45', sc1_30='$sc1_30' WHERE ID='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
+        }
+    }
+    public function update_routine_xi_hum($data)
+    {
+        $id = $data['id'];
+        $hum10_30 = $data['routine_10_30'];
+        $hum11_15 = $data['routine_11_15'];
+        $hum12_00 = $data['routine_12_00'];
+        $hum12_45 = $data['routine_12_45'];
+        $hum1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xi SET hum10_30='$hum10_30', hum11_15='$hum11_15', hum12_00='$hum12_00', hum12_45='$hum12_45', hum1_30='$hum1_30' WHERE ID='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
+        }
+    }
+    public function update_routine_xi_bus($data)
+    {
+        $id = $data['id'];
+        $bus10_30 = $data['routine_10_30'];
+        $bus11_15 = $data['routine_11_15'];
+        $bus12_00 = $data['routine_12_00'];
+        $bus12_45 = $data['routine_12_45'];
+        $bus1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xi SET bus10_30='$bus10_30', bus11_15='$bus11_15', bus12_00='$bus12_00', bus12_45='$bus12_45', bus1_30='$bus1_30' WHERE ID='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
+        }
+    }
+
+    public function get_routine_info_xii($id)
+    {
+        $query = "SELECT * FROM class_routine_xii WHERE id = '$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $routine_info = mysqli_query($this->conn, $query);
+            $routine_xi = mysqli_fetch_assoc($routine_info);
+            return $routine_xi;
+        }
+    }
+    public function update_routine_xii_sc($data)
+    {
+        $id = $data['id'];
+        $sc10_30 = $data['routine_10_30'];
+        $sc11_15 = $data['routine_11_15'];
+        $sc12_00 = $data['routine_12_00'];
+        $sc12_45 = $data['routine_12_45'];
+        $sc1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xii SET sc10_30='$sc10_30', sc11_15='$sc11_15', sc12_00='$sc12_00', sc12_45='$sc12_45', sc1_30='$sc1_30' WHERE id='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
+        }
+    }
+    public function update_routine_xii_hum($data)
+    {
+        $id = $data['id'];
+        $hum10_30 = $data['routine_10_30'];
+        $hum11_15 = $data['routine_11_15'];
+        $hum12_00 = $data['routine_12_00'];
+        $hum12_45 = $data['routine_12_45'];
+        $hum1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xii SET hum10_30='$hum10_30', hum11_15='$hum11_15', hum12_00='$hum12_00', hum12_45='$hum12_45', hum1_30='$hum1_30' WHERE id='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
+        }
+    }
+    public function update_routine_xii_bus($data)
+    {
+        $id = $data['id'];
+        $bus10_30 = $data['routine_10_30'];
+        $bus11_15 = $data['routine_11_15'];
+        $bus12_00 = $data['routine_12_00'];
+        $bus12_45 = $data['routine_12_45'];
+        $bus1_30 = $data['routine_1_30'];
+
+        $query = "UPDATE class_routine_xii SET bus10_30='$bus10_30', bus11_15='$bus11_15', bus12_00='$bus12_00', bus12_45='$bus12_45', bus1_30='$bus1_30' WHERE id='$id'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Routine Updated Successfully!";
         }
     }
 }

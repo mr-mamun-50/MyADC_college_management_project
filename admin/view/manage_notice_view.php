@@ -11,15 +11,27 @@ if (isset($_GET['status'])) {
 
 ?>
 
-<ol class="breadcrumb my-3">
+<ul class="nav nav-tabs mt-3">
+    <li class="nav-item">
+        <a class="nav-link active" href="manage_notice.php">Manage Notice</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="add_notice.php">Create Notice</a>
+    </li>
+</ul>
+
+<!-- <ol class="breadcrumb my-3">
     <li class="breadcrumb-item ">Notices</li>
     <li class="breadcrumb-item active">Manage Notice</li>
-</ol>
+</ol> -->
 
-<div class="card mb-4">
-    <div class="card-header">
-        <i class="fas fa-flag"></i>
-        Notices
+<div class="shadow mb-3">
+    <div class="card-header d-flex justify-content-between">
+        <span class="mt-1">
+            <i class="fas fa-flag"></i>
+            Notices
+        </span>
+        <a class="btn btn-success btn-sm" href="add_notice.php"><i class="fas fa-plus-square"></i> Create</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -27,7 +39,6 @@ if (isset($_GET['status'])) {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
                         <th>Subject</th>
                         <th>Notice by</th>
                         <th>Description</th>
@@ -38,7 +49,6 @@ if (isset($_GET['status'])) {
                 <tfoot>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
                         <th>Subject</th>
                         <th>Notice by</th>
                         <th>Description</th>
@@ -52,20 +62,20 @@ if (isset($_GET['status'])) {
 
                         <tr>
                             <td><?php echo $notice['notice_id']; ?></td>
-                            <td><?php echo $notice['notice_title']; ?></td>
                             <td><?php echo $notice['notice_subject']; ?></td>
                             <td>
                                 <?php echo $notice['notice_by_name']; ?><br>
                                 <small><?php echo $notice['notice_by_designation']; ?></small>
                             </td>
                             <td><?php echo $notice['notice_description']; ?></td>
-                            <td><?php
-                                if ($notice['notice_status'] == 1) echo "Public";
-                                else echo "Private";
-                                ?></td>
-                            <td>
-                                <a href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>" class="btn btn-warning my-1 w-100"><i class="fas fa-edit"></i> </a>
-                                <a href="?status=delete&&id=<?php echo $notice['notice_id']; ?>" class="btn btn-danger w-100"><i class="fas fa-trash-alt"></i> </a>
+                            <td class="text-center"><?php
+                                                    if ($notice['notice_status'] == 1) echo "Public";
+                                                    else echo "Private";
+                                                    ?></td>
+                            <td class="text-center">
+                                <a class="btn btn-success mt-1 w-75 btn-sm" href="printable_files/notice_print.php?status=print_notice&&id=<?php echo $notice['notice_id']; ?>" target="blank"><i class="fas fa-print"></i> </a>
+                                <a class="btn btn-primary my-1 w-75 btn-sm" href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-edit"></i> </a>
+                                <a class="btn btn-danger w-75 btn-sm" href="?status=delete&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-trash-alt"></i> </a>
                             </td>
                         </tr>
                     <?php } ?>
