@@ -34,16 +34,6 @@ $routineDataXII = $obj->display_routine_xii();
                     </div>
                 </div>
             </form>
-            <!-- <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
-                    Select Department
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="submit" name="science_view">Science</button>
-                    <button class="dropdown-item" type="submit" name="humanities_view">Humanities</button>
-                    <button class="dropdown-item" type="submit" name="business_view">Business</button>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -75,15 +65,7 @@ $routineDataXII = $obj->display_routine_xii();
                         } else if ($_POST['routine_status'] == 3) {
                             include_once("view/routines/busXII.php");
                         }
-                    }
-                    // if (isset('science_view')) {
-                    //     include_once("view/routines/scXI.php");
-                    // } else if (isset("humanities_view")) {
-                    //     include_once("view/routines/humXI.php");
-                    // } else if (isset("business_view")) {
-                    //     include_once("view/routines/busXI.php");
-                    // }
-                    else {
+                    } else {
                         include_once("view/routines/scXII.php");
                     }
 

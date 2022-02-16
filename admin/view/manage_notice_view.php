@@ -73,9 +73,9 @@ if (isset($_GET['status'])) {
                                                     else echo "Private";
                                                     ?></td>
                             <td class="text-center">
-                                <a class="btn btn-success mt-1 w-75 btn-sm" href="printable_files/notice_print.php?status=print_notice&&id=<?php echo $notice['notice_id']; ?>" target="blank"><i class="fas fa-print"></i> </a>
-                                <a class="btn btn-primary my-1 w-75 btn-sm" href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-edit"></i> </a>
-                                <a class="btn btn-danger w-75 btn-sm" href="?status=delete&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-trash-alt"></i> </a>
+                                <a class="btn btn-outline-success mt-1 w-75 btn-sm" href="printable_files/notice_print.php?status=print_notice&&id=<?php echo $notice['notice_id']; ?>" target="blank"><i class="fas fa-print"></i> </a>
+                                <a class="btn btn-outline-primary my-1 w-75 btn-sm" href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-edit"></i> </a>
+                                <a class="btn btn-outline-danger w-75 btn-sm" href="?status=delete&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-trash-alt"></i> </a>
                             </td>
                         </tr>
                     <?php } ?>

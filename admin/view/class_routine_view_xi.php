@@ -30,20 +30,10 @@ $routineDataXI = $obj->display_routine_xi();
                         <option value="3">Business</option>
                     </select>
                     <div class="input-group-append">
-                        <button class="btn btn-success" name="routine_dept" type="submit"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-success" name="routine_dept" id="routine_dept" type="submit"><i class="fas fa-eye"></i></button>
                     </div>
                 </div>
             </form>
-            <!-- <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
-                    Select Department
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="submit" name="science_view">Science</button>
-                    <button class="dropdown-item" type="submit" name="humanities_view">Humanities</button>
-                    <button class="dropdown-item" type="submit" name="business_view">Business</button>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -62,7 +52,7 @@ $routineDataXI = $obj->display_routine_xi();
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table_body">
 
                     <?php
 
@@ -75,15 +65,7 @@ $routineDataXI = $obj->display_routine_xi();
                         } else if ($_POST['routine_status'] == 3) {
                             include_once("view/routines/busXI.php");
                         }
-                    }
-                    // if (isset('science_view')) {
-                    //     include_once("view/routines/scXI.php");
-                    // } else if (isset("humanities_view")) {
-                    //     include_once("view/routines/humXI.php");
-                    // } else if (isset("business_view")) {
-                    //     include_once("view/routines/busXI.php");
-                    // }
-                    else {
+                    } else {
                         include_once("view/routines/scXI.php");
                     }
 
@@ -94,3 +76,17 @@ $routineDataXI = $obj->display_routine_xi();
         </div>
     </div>
 </div>
+
+<!-- <script type="text/javascript">
+    $(document).ready(function() {
+        $("#routine_dept").on("click", function(e) {
+            $.ajax({
+                url: "view/routines/scXI.php",
+                type: "POST",
+                success: function(data) {
+                    $("#table_body").html(data);
+                }
+            });
+        });
+    });
+</script> -->

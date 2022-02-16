@@ -46,6 +46,8 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/edit_routine_xi_view.php");
                         } else  if ($view == "edit_routine_xii") {
                             include("./view/edit_routine_xii_view.php");
+                        } else  if ($view == "all_students") {
+                            include("./view/all_students_view.php");
                         }
                     }
 

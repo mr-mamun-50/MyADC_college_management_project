@@ -62,7 +62,12 @@
                     Admission
                 </a>
 
-                <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#studentsInfo" aria-expanded="false" aria-controls="studentsInfo">
+                <a class="nav-link mx-1" href="all_students.php">
+                    <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                    Students Info
+                </a>
+
+                <!-- <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#studentsInfo" aria-expanded="false" aria-controls="studentsInfo">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Students Info
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -74,7 +79,7 @@
                         <a class="nav-link mr-1" href="#">HSC Examinee</a>
                         <a class="nav-link mr-1" href="#">Old Students</a>
                     </nav>
-                </div>
+                </div> -->
 
                 <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#teachersInfo" aria-expanded="false" aria-controls="teachersInfo">
                     <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
