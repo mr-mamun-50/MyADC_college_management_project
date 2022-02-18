@@ -14,7 +14,7 @@ $routineDataXI = $obj->display_routine_xi();
     </li>
 </ul>
 
-<div class="shadow mb-3">
+<div class="card border-top-0 mb-3 rounded-0">
 
     <div class="card-header d-flex justify-content-between">
         <span class="mt-2">

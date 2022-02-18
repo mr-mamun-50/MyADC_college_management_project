@@ -1,3 +1,9 @@
+:root {
+    --gradient: linear-gradient(90deg, #a685e2, #6155a6);
+}
+html {
+    font-size: 90% !important;
+}
 .bg-login {
     width: 100%;
     height: 100vh;
@@ -45,3 +51,31 @@ html::-webkit-scrollbar-thumb {
 .r-border-left {
     border-radius: 50px 0 0 50px !important;
 }
+
+/* .mybtn {
+    padding: 7px 20px;
+    color: #fff;
+    background: var(--gradient);
+    border-radius: 5rem;
+    cursor: pointer;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.mybtn::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: -100%;
+    background: #fff9;
+    height: 150%;
+    width: 20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+.mybtn:hover::before {
+    transition: 0.5s linear;
+    left: 120%;
+    text-decoration: none !important;
+} */

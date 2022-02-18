@@ -10,7 +10,7 @@
             </div>
         </div>
     </form>
-    <a href="#" class="btn btn-success mr-1 d-none d-md-inline r-border">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
+    <a href="#" class="btn btn-info r-border mr-1 d-none d-md-inline">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">

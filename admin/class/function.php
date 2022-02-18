@@ -234,4 +234,23 @@ class adminMyADC
             return "Routine Updated Successfully!";
         }
     }
+    public function display_students_info()
+    {
+        $query = "SELECT * FROM students_information";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
+    public function get_student_info($sl)
+    {
+        $query = "SELECT * FROM students_information WHERE sl = '$sl'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $student_info = mysqli_query($this->conn, $query);
+            $student = mysqli_fetch_assoc($student_info);
+            return $student;
+        }
+    }
 }
