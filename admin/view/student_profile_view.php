@@ -37,6 +37,10 @@ if (isset($_GET['status'])) {
                         <td> <?php echo $student_info['dept']; ?></td>
                     </tr>
                     <tr>
+                        <th>Current Class: </th>
+                        <td> <?php echo $student_info['c_class']; ?></td>
+                    </tr>
+                    <tr>
                         <th>Session: </th>
                         <td> <?php echo $student_info['session']; ?></td>
                     </tr>

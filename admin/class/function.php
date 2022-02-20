@@ -243,6 +243,42 @@ class adminMyADC
             return $students;
         }
     }
+    public function display_old_students_info()
+    {
+        $query = "SELECT * FROM students_information WHERE c_class = 'Old student'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
+    public function display_xi_students_info()
+    {
+        $query = "SELECT * FROM students_information WHERE c_class = 'XI'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
+    public function display_xii_students_info()
+    {
+        $query = "SELECT * FROM students_information WHERE c_class = 'XII'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
+    public function display_hsc_exa_students_info()
+    {
+        $query = "SELECT * FROM students_information WHERE c_class = 'HSC Examinee'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
     public function get_student_info($sl)
     {
         $query = "SELECT * FROM students_information WHERE sl = '$sl'";

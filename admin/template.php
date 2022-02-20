@@ -50,6 +50,14 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/all_students_view.php");
                         } else  if ($view == "student_profile") {
                             include("./view/student_profile_view.php");
+                        } else  if ($view == "xi_students") {
+                            include("./view/xi_students_view.php");
+                        } else  if ($view == "xii_students") {
+                            include("./view/xii_students_view.php");
+                        } else  if ($view == "hsc_exa_students") {
+                            include("./view/hsc_exa_students_view.php");
+                        } else  if ($view == "old_students") {
+                            include("./view/old_students_view.php");
                         }
                     }
 

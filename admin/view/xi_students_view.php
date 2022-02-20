@@ -1,15 +1,15 @@
 <?php
 
-$students_info = $obj->display_students_info();
+$students_info = $obj->display_xi_students_info();
 
 ?>
 
 <ul class="nav nav-tabs mt-3">
     <li class="nav-item">
-        <a class="nav-link active" href="">All Students</a>
+        <a class="nav-link" href="all_students.php">All Students</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="xi_students.php">XI</a>
+        <a class="nav-link active" href="">XI</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="xii_students.php">XII</a>

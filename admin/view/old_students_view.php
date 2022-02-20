@@ -1,12 +1,12 @@
 <?php
 
-$students_info = $obj->display_students_info();
+$students_info = $obj->display_old_students_info();
 
 ?>
 
 <ul class="nav nav-tabs mt-3">
     <li class="nav-item">
-        <a class="nav-link active" href="">All Students</a>
+        <a class="nav-link" href="all_students.php">All Students</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="xi_students.php">XI</a>
@@ -18,7 +18,7 @@ $students_info = $obj->display_students_info();
         <a class="nav-link" href="hsc_exa_students.php">HSC Examinee</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="old_students.php">Old Students</a>
+        <a class="nav-link active" href="">Old Students</a>
     </li>
 </ul>
 
