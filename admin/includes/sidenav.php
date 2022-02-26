@@ -57,7 +57,7 @@
                     </nav>
                 </div>
 
-                <a class="nav-link mx-1" href="#">
+                <a class="nav-link mx-1" href="admission.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
                     Admission
                 </a>

@@ -53,6 +53,14 @@ if (isset($_GET['status'])) {
                         <td> <?php echo $student_info['mothers_name']; ?> </td>
                     </tr>
                     <tr>
+                        <th>Date of birth: </th>
+                        <td> <?php echo $student_info['dob']; ?> </td>
+                    </tr>
+                    <tr>
+                        <th>Gender: </th>
+                        <td> <?php echo $student_info['gender']; ?> </td>
+                    </tr>
+                    <tr>
                         <th>Address: </th>
                         <td> <?php echo $student_info['address']; ?> </td>
                     </tr>
