@@ -312,4 +312,41 @@ class adminMyADC
             return $students;
         }
     }
+    public function check_admission($s_code)
+    {
+        $query = "SELECT * FROM new_admitted_students WHERE s_code = '$s_code'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $check_info = mysqli_query($this->conn, $query);
+            $data = mysqli_fetch_assoc($check_info);
+
+            if (isset($data)) {
+                if ($data['s_code'] == $s_code) {
+                    return "YES";
+                } else {
+                    return "NO";
+                }
+            }
+        }
+    }
+    public function update_pay_id($data)
+    {
+        $sl = $data['sl'];
+        $pay_id = $data['pay_id'];
+
+        $query = "UPDATE admission_security_code SET pay_id	= '$pay_id' WHERE sl = '$sl'";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "TrxID updated successfully!";
+        }
+    }
+    public function display_adm_data()
+    {
+        $query = "SELECT * FROM new_admitted_students";
+
+        if (mysqli_query($this->conn, $query)) {
+            $admissions = mysqli_query($this->conn, $query);
+            return $admissions;
+        }
+    }
 }

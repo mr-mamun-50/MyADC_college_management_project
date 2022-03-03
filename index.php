@@ -4,9 +4,6 @@ include("./class/function.php");
 
 $obj = new userMyADC();
 
-if (isset($_POST['s_check'])) {
-    $obj->check_security_code($_POST);
-}
 
 ?>
 
@@ -30,33 +27,8 @@ if (isset($_POST['s_check'])) {
                         <a class="btn-grad-primary l-icon mx-1" href=""><i class="fas fa-chalkboard-teacher d-block"></i> Teacher</a>
 
                         <h5 class="mt-4">Not a student?</h5>
-                        <a class="btn-grad-secondary" href="" data-toggle="modal" data-target="#secAlert"><i class="fas fa-user-plus"></i> Admission</a>
+                        <a class="btn-grad-secondary" href="./admission_procedure.php"><i class="fas fa-user-plus"></i> Admission</a>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="secAlert" tabindex="-1" aria-labelledby="secAlertLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content px-3">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="secAlertLabel">Security Code</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <form action="" method="POST">
-                                        <div class="modal-body text-left">
-                                            <div class="form-group">
-                                                <label class="" for="secCode">Please, Enter your admission security code</label>
-                                                <input class="form-control" name="s_code" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                            <button name="s_check" class="btn-grad-primary" type="submit">Submit</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

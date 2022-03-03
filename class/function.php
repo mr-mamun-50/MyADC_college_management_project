@@ -16,8 +16,9 @@ class userMyADC
     public function check_security_code($data)
     {
         $s_code = $data['s_code'];
+        $pay_id = $data['pay_id'];
 
-        $query = "SELECT * FROM admission_security_code WHERE security_code = '$s_code'";
+        $query = "SELECT * FROM admission_security_code WHERE security_code = '$s_code' && pay_id = '$pay_id'";
 
         if (mysqli_query($this->conn, $query)) {
             $s_info = mysqli_query($this->conn, $query);
@@ -28,6 +29,7 @@ class userMyADC
                 session_start();
                 $_SESSION['s_id'] = $s_data['sl'];
                 $_SESSION['s_code'] = $s_data['security_code'];
+                $_SESSION['pay_id'] = $s_data['pay_id'];
                 $_SESSION['name'] = $s_data['std_name'];
             }
         }
@@ -62,7 +64,6 @@ class userMyADC
 
         $ssc_testimonial = $_FILES['ssc_testimonial']['name'];
         $ssc_testimonial_tmp = $_FILES['ssc_testimonial']['tmp_name'];
-
 
         $query = "INSERT INTO new_admitted_students(s_code, st_name, fathers_name, mothers_name, dob, gender, phone, email, par_address, pre_address, birth_reg_nid, ssc_year, ssc_res, ssc_board, ssc_dept, ssc_school, appl_dept, pay_transc, std_photo, ssc_marksheet, ssc_testimonial) VALUE('$s_code', '$st_name', '$father_name', '$mother_name', '$dob', '$gender', '$contact', '$email', '$par_address', '$pre_address', '$br_nid', '$ssc_year', '$ssc_gpa', '$ssc_board', '$ssc_dept', '$ssc_school', '$appl_dept', '$pay_transc', '$std_photo', '$ssc_marksheet', '$ssc_testimonial')";
 

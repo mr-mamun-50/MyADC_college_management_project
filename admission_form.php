@@ -6,9 +6,10 @@ $obj = new userMyADC();
 session_start();
 $id = $_SESSION['s_id'];
 $code = $_SESSION['s_code'];
+$pay_id = $_SESSION['pay_id'];
 $s_name = $_SESSION['name'];
 if ($id == null) {
-    header("location: index.php");
+    header("location: admission_procedure.php");
 }
 
 if (isset($_POST['submit_admission'])) {
@@ -24,13 +25,13 @@ if (isset($_POST['submit_admission'])) {
     <div class="container">
         <div class="shadow-lg">
 
-            <div class="mt-3 bg-grad-primary card-header d-flex justify-content-between">
-                <a class="mt-1 btn text-white" href="./index.php"><i class="fas fa-arrow-left"></i></a>
-                <h4 class="mt-2 ml-3 text-white">Admission form</h5>
-                    <a class="mt-1 btn text-white" href=""><i class="fas fa-info-circle"></i></a>
+            <div class="mt-3 bg-grad-primary card-header d-flex justify-content-between p-0">
+                <a class="mt-1 btn text-white" href="./index.php"><img class="" src="./admin/images/icon.png" alt="" style="width: 50px;"></a>
+                <h4 class="mt-2 ml-3 text-white mt-4">Admission form</h4>
+                <a class="mt-1 btn text-white m-3" href=""><i class="fas fa-info-circle fa-lg"></i></a>
             </div>
 
-            <div class="card-body">
+            <div class="card-body px-lg-5">
 
                 <?php if (isset($return_msg)) { ?>
 
@@ -45,11 +46,11 @@ if (isset($_POST['submit_admission'])) {
                 <form action="" method="POST" enctype="multipart/form-data">
 
                     <div class="row my-2">
-                        <div class="col-sm-4">
+                        <div class="col-lg-4 col-sm-6">
                             <label for="">Security Code</label>
                             <input class="form-control" name="s_code" type="text" value="<?php echo $code; ?>" readonly>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-lg-8 col-sm-6">
                             <label for="">Name</label>
                             <input class="form-control" name="st_name" type="text" value="<?php echo $s_name; ?>" readonly>
                         </div>
@@ -160,7 +161,7 @@ if (isset($_POST['submit_admission'])) {
 
                         <div class="col-sm-6 col-lg-4 mt-2">
                             <label for="">Rocket payment transection ID</label>
-                            <input class="form-control" type="text" name="pay_transc">
+                            <input class="form-control" type="text" name="pay_transc" value="<?php echo $pay_id; ?>" readonly>
                         </div>
 
                     </div>

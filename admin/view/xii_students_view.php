@@ -65,7 +65,7 @@ $students_info = $obj->display_xii_students_info();
                         <tr>
                             <td><?php echo $student['st_id']; ?></td>
                             <td><img class="" src="images/students_img/<?php echo $student['photo']; ?>" alt="Photo" style="width: 100px"></td>
-                            <td><?php echo $student['name']; ?></td>
+                            <td><?php echo $student['st_name']; ?></td>
                             <td><?php echo $student['dept']; ?></td>
                             <td>
                                 <b>Father: </b><?php echo $student['fathers_name']; ?><br>
