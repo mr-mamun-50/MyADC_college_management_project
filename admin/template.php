@@ -60,8 +60,10 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/old_students_view.php");
                         } else  if ($view == "admission") {
                             include("./view/admission_view.php");
-                        } else  if ($view == "admission_security_entry") {
-                            include("./view/adm_security_entry_view.php");
+                        } else  if ($view == "admission_security") {
+                            include("./view/adm_security_view.php");
+                        } else  if ($view == "enter_security") {
+                            include("./view/enter_security_view.php");
                         }
                     }
 

@@ -289,4 +289,27 @@ class adminMyADC
             return $student;
         }
     }
+
+    public function add_admission_security($data)
+    {
+        $std_name = $data['std_name'];
+        $ssc_roll = $data['ssc_roll'];
+        $ssc_reg = $data['ssc_reg'];
+        $security_code = $data['security_code'];
+
+        $query = "INSERT INTO admission_security_code(std_name, ssc_roll, ssc_reg, security_code) VALUE('$std_name', '$ssc_roll', '$ssc_reg', '$security_code')";
+
+        if (mysqli_query($this->conn, $query)) {
+            return "Security Code Added Successfully";
+        }
+    }
+    public function display_admission_security()
+    {
+        $query = "SELECT * FROM admission_security_code";
+
+        if (mysqli_query($this->conn, $query)) {
+            $students = mysqli_query($this->conn, $query);
+            return $students;
+        }
+    }
 }

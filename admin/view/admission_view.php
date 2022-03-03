@@ -3,7 +3,7 @@
         <a class="nav-link active" href="">Manage Admission</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="adm_security_entry.php">Security Code</a>
+        <a class="nav-link" href="adm_security.php">Security Code</a>
     </li>
 </ul>
 

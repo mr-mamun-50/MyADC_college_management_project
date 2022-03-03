@@ -1,3 +1,15 @@
+<?php
+
+include("./class/function.php");
+
+$obj = new userMyADC();
+
+if (isset($_POST['s_check'])) {
+    $obj->check_security_code($_POST);
+}
+
+?>
+
 <?php include_once("./includes/head.php") ?>
 
 <body class="bg-login">
@@ -30,16 +42,16 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form action="">
+                                    <form action="" method="POST">
                                         <div class="modal-body text-left">
                                             <div class="form-group">
                                                 <label class="" for="secCode">Please, Enter your admission security code</label>
-                                                <input class="form-control" type="text">
+                                                <input class="form-control" name="s_code" type="text">
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                            <a class="btn-grad-primary" href="./admission_form.php">Submit</a>
+                                            <button name="s_check" class="btn-grad-primary" type="submit">Submit</button>
                                         </div>
                                     </form>
                                 </div>

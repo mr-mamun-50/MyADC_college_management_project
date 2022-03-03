@@ -90,7 +90,7 @@ html::-webkit-scrollbar-thumb {
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     display: inline-block;
     border: none;
     outline: none;
@@ -113,7 +113,7 @@ html::-webkit-scrollbar-thumb {
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     display: inline-block;
     border: none;
     outline: none;
@@ -141,4 +141,8 @@ html::-webkit-scrollbar-thumb {
 }
 .bg-grad-secondary {
     background: var(--secondary_gradient);
+}
+
+.p-f {
+    padding: 0.2rem;
 }
