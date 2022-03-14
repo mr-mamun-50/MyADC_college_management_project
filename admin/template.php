@@ -64,6 +64,8 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/adm_security_view.php");
                         } else  if ($view == "enter_security") {
                             include("./view/enter_security_view.php");
+                        } else  if ($view == "new_admitted_student_profile") {
+                            include("./view/new_admitted_profile_view.php");
                         }
                     }
 

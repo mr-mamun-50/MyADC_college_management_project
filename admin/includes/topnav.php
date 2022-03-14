@@ -10,7 +10,7 @@
             </div>
         </div>
     </form>
-    <a href="../index.php" class="btn btn-info r-border mr-1 d-none d-md-inline">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
+    <a href="../index.php" class="btn btn-outline-warning r-border mr-1 d-none d-md-inline font-weight-bold">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">

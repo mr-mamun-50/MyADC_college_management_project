@@ -349,4 +349,14 @@ class adminMyADC
             return $admissions;
         }
     }
+    public function get_adm_data($sl)
+    {
+        $query = "SELECT * FROM new_admitted_students WHERE sl = '$sl'";
+
+        if (mysqli_query($this->conn, $query)) {
+            $student_info = mysqli_query($this->conn, $query);
+            $student = mysqli_fetch_assoc($student_info);
+            return $student;
+        }
+    }
 }

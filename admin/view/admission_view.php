@@ -60,7 +60,7 @@ $adm_data = $obj->display_adm_data();
                             <td><?php echo $adms['ssc_res'] ?></td>
                             <td><?php echo $adms['ssc_school'] ?></td>
                             <td class="text-center btn-group">
-                                <a class="btn btn-outline-primary btn-sm" href=""> <i class="fas fa-user"></i> </a>
+                                <a class="btn btn-outline-primary btn-sm" href="new_admitted_profile.php?status=view_admitted_profile&&sl=<?php echo $adms['sl']; ?>"> <i class="fas fa-user"></i> </a>
                                 <a class="btn btn-outline-success btn-sm" href="tel:<?php echo $adms['phone']; ?>"> <i class="fas fa-phone"></i> </a>
                                 <a class="btn btn-outline-danger btn-sm" href="mailto:<?php echo $adms['email']; ?>" target="blank"> <i class="fas fa-envelope"></i> </a>
                             </td>

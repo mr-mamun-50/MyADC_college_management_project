@@ -19,71 +19,76 @@ if (isset($_GET['status'])) {
 <div class="card">
     <div class="row card-header m-0 pt-4">
         <div class="col-md-4 col-lg-3 col-5">
-            <img class="w-100 m-3" src="images/students_img/<?php echo $student_info['photo']; ?>" alt="Photo">
+            <img class="w-100 m-3 rounded-circle" src="images/students_img/<?php echo $student_info['photo']; ?>" alt="Photo">
         </div>
         <div class="col-md-8 col-lg-9 pr-4">
-            <table class="table table-responsive-sm ml-4 mt-1">
-                <tbody>
-                    <tr>
-                        <th class="border-top-0">Name: </th>
-                        <td class="border-top-0"> <?php echo $student_info['name']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Student ID: </th>
-                        <td> <?php echo $student_info['st_id']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Group: </th>
-                        <td> <?php echo $student_info['dept']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Current Class: </th>
-                        <td> <?php echo $student_info['c_class']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Session: </th>
-                        <td> <?php echo $student_info['session']; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Father's Name: </th>
-                        <td> <?php echo $student_info['fathers_name']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Mother's Name: </th>
-                        <td> <?php echo $student_info['mothers_name']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Date of birth: </th>
-                        <td> <?php echo $student_info['dob']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Gender: </th>
-                        <td> <?php echo $student_info['gender']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Address: </th>
-                        <td> <?php echo $student_info['address']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Birth registration/NID no: </th>
-                        <td> <?php echo $student_info['birth_reg_nid']; ?> </td>
-                    </tr>
-                    <tr>
-                        <th>Phone: </th>
-                        <td> <a href="tel:<?php echo $student_info['phone']; ?>"><?php echo $student_info['phone']; ?></a> </td>
-                    </tr>
-                    <tr>
-                        <th>Email: </th>
-                        <td> <a href="mailto:<?php echo $student_info['email']; ?>" target="blank"><?php echo $student_info['email']; ?></a> </td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td class="text-right">
-                            <button class="btn btn-success"><i class="fas fa-edit"></i> Edit Profile</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <h1 class="ml-4 mt-3 mb-4"> <?php echo $student_info['st_name']; ?> </h1>
+
+            <div class="jumbotron ml-4 mt-1 p-3">
+                <table class="table table-responsive-sm">
+                    <tbody>
+                        <tr>
+                            <th>Student ID: </th>
+                            <td> <?php echo $student_info['st_id']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Group: </th>
+                            <td> <?php echo $student_info['dept']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Current Class: </th>
+                            <td> <?php echo $student_info['c_class']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Session: </th>
+                            <td> <?php echo $student_info['session']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Father's Name: </th>
+                            <td> <?php echo $student_info['fathers_name']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Mother's Name: </th>
+                            <td> <?php echo $student_info['mothers_name']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Date of birth: </th>
+                            <td> <?php echo $student_info['dob']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Gender: </th>
+                            <td> <?php echo $student_info['gender']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Presetnt address: </th>
+                            <td> <?php echo $student_info['pre_address']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Parmanent address: </th>
+                            <td> <?php echo $student_info['pre_address']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Birth registration/NID no: </th>
+                            <td> <?php echo $student_info['birth_reg_nid']; ?> </td>
+                        </tr>
+                        <tr>
+                            <th>Phone: </th>
+                            <td> <a href="tel:<?php echo $student_info['phone']; ?>"><?php echo $student_info['phone']; ?></a> </td>
+                        </tr>
+                        <tr>
+                            <th>Email: </th>
+                            <td> <a href="mailto:<?php echo $student_info['email']; ?>" target="blank"><?php echo $student_info['email']; ?></a> </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td class="text-right">
+                                <button class="btn btn-success"><i class="fas fa-edit"></i> Edit Profile</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
