@@ -8,7 +8,7 @@
                     Dashboard
                 </a>
 
-                <a class="nav-link mx-1" href="manage_notice.php">
+                <a class="nav-link mx-1" href="notice.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-flag"></i></div>
                     Notices
                 </a>
@@ -67,6 +67,11 @@
                     Students Info
                 </a>
 
+                <a class="nav-link mx-1" href="all_teachers.php">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    Teachers Info
+                </a>
+
                 <!-- <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#studentsInfo" aria-expanded="false" aria-controls="studentsInfo">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Students Info
@@ -81,7 +86,7 @@
                     </nav>
                 </div> -->
 
-                <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#teachersInfo" aria-expanded="false" aria-controls="teachersInfo">
+                <!-- <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#teachersInfo" aria-expanded="false" aria-controls="teachersInfo">
                     <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     Teachers Info
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -93,7 +98,7 @@
                         <a class="nav-link mr-1" href="#">Dept. of Arts</a>
                         <a class="nav-link mr-1" href="#">Dept. of Commerce</a>
                     </nav>
-                </div>
+                </div> -->
                 <a class="nav-link collapsed mx-1" href="#" data-toggle="collapse" data-target="#download" aria-expanded="false" aria-controls="download">
                     <div class="sb-nav-link-icon"><i class="fas fa-download"></i></div>
                     Download

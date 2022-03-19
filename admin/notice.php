@@ -1,4 +1,4 @@
 <?php
 
-$view = "manage_notice";
+$view = "Notice";
 include("./template.php");

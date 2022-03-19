@@ -6,14 +6,14 @@ if (isset($_POST['add_notice'])) {
 
 ?>
 
-<ul class="nav nav-tabs mt-3">
+<!-- <ul class="nav nav-tabs mt-3">
     <li class="nav-item">
         <a class="nav-link" href="manage_notice.php">Manage Notice</a>
     </li>
     <li class="nav-item">
         <a class="nav-link active" href="add_notice.php">Create Notice</a>
     </li>
-</ul>
+</ul> -->
 
 <!-- <ol class="breadcrumb my-3">
     <li class="breadcrumb-item">Notices</li>

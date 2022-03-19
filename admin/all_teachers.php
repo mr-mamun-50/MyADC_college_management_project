@@ -1,4 +1,4 @@
 <?php
 
-$view = "add_notice";
+$view = "All_Teachers";
 include("./template.php");

@@ -7,9 +7,16 @@ html {
 .bg-login {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(
+    /* background: linear-gradient(
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
+        ),
+        url(../images/porter-raab-gnj9vj--FRY-unsplash.jpg); */
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.7) 51%,
+            rgba(0, 0, 0, 0.8) 100%
         ),
         url(../images/porter-raab-gnj9vj--FRY-unsplash.jpg);
     background-size: cover;

@@ -11,14 +11,14 @@ if (isset($_GET['status'])) {
 
 ?>
 
-<ul class="nav nav-tabs mt-3">
+<!-- <ul class="nav nav-tabs mt-3">
     <li class="nav-item">
         <a class="nav-link active" href="manage_notice.php">Manage Notice</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="add_notice.php">Create Notice</a>
     </li>
-</ul>
+</ul> -->
 
 <!-- <ol class="breadcrumb my-3">
     <li class="breadcrumb-item ">Notices</li>
@@ -31,7 +31,7 @@ if (isset($_GET['status'])) {
             <i class="fas fa-flag"></i>
             Notices
         </span>
-        <a class="btn btn-success btn-sm" href="add_notice.php"><i class="fas fa-plus-square"></i> Create</a>
+        <!-- <a class="btn btn-success btn-sm" href="add_notice.php"><i class="fas fa-plus-square"></i> Create</a> -->
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -72,35 +72,38 @@ if (isset($_GET['status'])) {
                                                     if ($notice['notice_status'] == 1) echo "Public";
                                                     else echo "Private";
                                                     ?></td>
-                            <td class="text-center btn-group">
-                                <a class="btn btn-outline-success my-1 btn-sm" href="printable_files/notice_print.php?status=print_notice&&id=<?php echo $notice['notice_id']; ?>" target="blank"><i class="fas fa-print"></i> </a>
-                                <a class="btn btn-outline-primary my-1 btn-sm" href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-edit"></i> </a>
-                                <a class="btn btn-outline-danger my-1 btn-sm" href="" data-toggle="modal" data-target="#dltAlert"><i class="fas fa-trash-alt"></i> </a>
-                            </td>
-                        </tr>
+                            <td>
+                                <div class="btn-group">
+                                    <a class="btn btn-outline-success my-1 btn-sm" href="printable_files/notice_print.php?status=print_notice&&id=<?php echo $notice['notice_id']; ?>" target="blank"><i class="fas fa-print"></i> </a>
+                                    <a class="btn btn-outline-primary my-1 btn-sm" href="edit_notice.php?status=edit_notice&&id=<?php echo $notice['notice_id']; ?>"><i class="fas fa-edit"></i> </a>
+                                    <a class="btn btn-outline-danger my-1 btn-sm" href="" data-toggle="modal" data-target="<?php echo "#dltAlert_" . $notice['notice_id'] ?>"><i class="fas fa-trash-alt"></i> </a>
+                                </div>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="dltAlert" tabindex="-1" aria-labelledby="dltAlertLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content px-3">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="dltAlertLabel">Delete notice</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p><b>Do you really want to delete this notice?</b><br>
-                                            It's not recoberable.
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                                        <a class="btn btn-danger" href="?status=delete&&id=<?php echo $notice['notice_id']; ?>">Delete</a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="<?php echo "dltAlert_" . $notice['notice_id'] ?>" tabindex="-1" aria-labelledby="<?php echo "#dltAlert_" . $notice['notice_id'] . "Label" ?>" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content px-3">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="<?php echo "#dltAlert_" . $notice['notice_id'] . "Label" ?>">Delete notice</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><b>Do you really want to delete this notice?</b><br>
+                                                    It's not recoberable.
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light" data-dismiss="modal">No</button>
+                                                <a class="btn btn-danger" href="?status=delete&&id=<?php echo $notice['notice_id']; ?>">Yes</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+
+                        </tr>
 
                     <?php } ?>
 

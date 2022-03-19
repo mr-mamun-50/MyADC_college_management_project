@@ -13,8 +13,8 @@ if (isset($_POST['update_notice'])) {
 ?>
 
 <ol class="breadcrumb my-3">
-    <li class="breadcrumb-item "><a href="manage_notice.php">Notices</a></li>
-    <li class="breadcrumb-item"><a href="manage_notice.php">Manage Notice</a></li>
+    <li class="breadcrumb-item "><a href="notice.php">Notices</a></li>
+    <li class="breadcrumb-item"><a href="notice.php">Manage Notice</a></li>
     <li class="breadcrumb-item active">Edit Notice</li>
 </ol>
 

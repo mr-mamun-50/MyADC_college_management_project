@@ -34,8 +34,8 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/dash_view.php");
                         } else  if ($view == "manage_notice") {
                             include("./view/manage_notice_view.php");
-                        } else  if ($view == "add_notice") {
-                            include("./view/add_notice_view.php");
+                        } else  if ($view == "Notice") {
+                            include("./view/notice_view.php");
                         } else  if ($view == "edit_notice") {
                             include("./view/edit_notice_view.php");
                         } else  if ($view == "class_routine_xi") {
@@ -66,6 +66,8 @@ if (isset($_GET['adminlogout'])) {
                             include("./view/enter_security_view.php");
                         } else  if ($view == "new_admitted_student_profile") {
                             include("./view/new_admitted_profile_view.php");
+                        } else  if ($view == "All_Teachers") {
+                            include("./view/all_teachers_view.php");
                         }
                     }
 

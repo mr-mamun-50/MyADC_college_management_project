@@ -10,7 +10,7 @@
             </div>
         </div>
     </form>
-    <a href="../index.php" class="btn btn-outline-warning r-border mr-1 d-none d-md-inline font-weight-bold">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
+    <a href="../index.php" class="btn btn-outline-warning r-border mr-1 d-none d-md-inline font-weight-bold" target="blank">Go to MyADC <i class="bi bi-box-arrow-in-up-right"></i></a>
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">
@@ -19,7 +19,7 @@
                 <a class="dropdown-item" href="#">Settings</a>
                 <a class="dropdown-item" href="#">Activity Log</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="?adminlogout=logout">Logout</a>
+                <a class="dropdown-item" href="?adminlogout=logout" onclick="return confirm('Do you really want to log out?')">Logout</a>
             </div>
         </li>
     </ul>
